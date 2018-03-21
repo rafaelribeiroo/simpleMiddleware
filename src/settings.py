@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
     # My apps
     'src.apps.middlewares',
+    'src.apps.sample',
 ]
 
 MIDDLEWARE = [
@@ -38,6 +39,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'src.apps.sample.middleware.ChangeNormalUserToAdminMiddleware',
 ]
 
 ROOT_URLCONF = 'src.urls'

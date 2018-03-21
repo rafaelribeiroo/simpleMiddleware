@@ -1,5 +1,6 @@
 # Todo mundo em superuser na minha aplicação em tempo-real
 # Posso criar um middleware sendo uma classe ou um método, whatever.
+from django.contrib.auth.models import User
 
 
 class ChangeNormalUserToAdminMiddleware(object):
@@ -11,7 +12,9 @@ class ChangeNormalUserToAdminMiddleware(object):
     def __call__(self, request):
 
         # Antes que meu request seja entregue
-        print("Rodou antes")
+        rafael = User.objects.get(username='Rafael')
+        print(request.user)
+        print('Rodou antes')
         response = self.get_response(request)
 
         # Depois
