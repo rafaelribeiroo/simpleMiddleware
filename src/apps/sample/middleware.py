@@ -14,8 +14,13 @@ class ChangeNormalUserToAdminMiddleware(object):
         # Antes que meu request seja entregue
         rafael = User.objects.get(username='Rafael')
         print(request.user)
+        request.user = rafael
+        print(request.user)
+
         print('Rodou antes')
         response = self.get_response(request)
 
         # Depois
         return response
+
+# No caso utilizei apenas 2 hooks que o Django já me fornece, sendo eles: call e init. Métodos de middleware basicamente.

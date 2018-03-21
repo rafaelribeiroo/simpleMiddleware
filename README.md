@@ -1,6 +1,6 @@
 # Simples middleware
 
-Uma demonstração de como funcionam os middlewares em django
+Uma demonstração de como funcionam os middlewares em django, neste exemplo fiz todos os usuários do meu sistema (até mesmo os users anônimos), serem super-usuários.
 
 ## Conceitos
 
