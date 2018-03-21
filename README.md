@@ -12,6 +12,7 @@ Ao trabalhar com o framework django nos deparamos com um arquivo de configuraç�
 
 ```
 MIDDLEWARE = [
+
 	# Ele vai várias validações como por exemplo o tipo de request, ver se você está atrás de um proxy, ele pode ajudar você a escapar informações
     'django.middleware.security.SecurityMiddleware',
 
